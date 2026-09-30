@@ -1,0 +1,14 @@
+# FYP 專案忽略清單（本目錄專用）
+# 規矩來源：agent.md §2.1-5（唔准 commit 機密或產生物）
+
+# 驗證記錄（tools/verify.ps1 產生）
+_reports/
+
+# 暫存／備份／日誌
+*.tmp
+*.bak
+*.log
+
+# 執行期間產生嘅暫存檔
+*.pyc
+__pycache__/
