@@ -1,0 +1,32 @@
+{
+    "version":  1,
+    "algorithm":  "sha256",
+    "note":  "由 tools/verify.ps1 -WriteManifest 產生，唔准手改；tools/manifest.json 自身不列入清單。",
+    "hashMode":  "UTF-8 文字內容之 SHA-256；.docx 二進位檔以 UTF-8 解碼後計算，只用於偵測改動。",
+    "files":  [
+                  {
+                      "path":  ".gitignore",
+                      "sha256":  "47979213c1e66400a0d35ede21d208867c05dbefc548097a0deff4835a36911b"
+                  },
+                  {
+                      "path":  "agent.md",
+                      "sha256":  "04925f64db72e1cc7d3732233d658eda65b2704de77827df200a918817566158"
+                  },
+                  {
+                      "path":  "README.md",
+                      "sha256":  "4935c8bf91c7ccc0fca74db4112d69b999c339a2b38e2908742ccffbcffc79c8"
+                  },
+                  {
+                      "path":  "tools/verify.ps1",
+                      "sha256":  "0441fda3353f21ca1885e4b5f00720a24d6dbc920d124f3bf818619098bf2909"
+                  },
+                  {
+                      "path":  "Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx",
+                      "sha256":  "ec408eb33bc389e096722f769fbfaa02c001e8b8eb4b6e4b80b3a1eeee68f18d"
+                  },
+                  {
+                      "path":  "With in AIMCPLLM.txt",
+                      "sha256":  "09bc096d9e47e7e8b68f70542f11d35592e0ba5db21b444452affcfd200c9358"
+                  }
+              ]
+}
