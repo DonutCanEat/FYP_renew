@@ -10,11 +10,11 @@
                   },
                   {
                       "path":  "agent.md",
-                      "sha256":  "04925f64db72e1cc7d3732233d658eda65b2704de77827df200a918817566158"
+                      "sha256":  "30af3fe2d2edf8b70580865750c7f8e6a36b5360fc2eced0710e0f1251ca457a"
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "4935c8bf91c7ccc0fca74db4112d69b999c339a2b38e2908742ccffbcffc79c8"
+                      "sha256":  "5ff1755f986a97f97ce7543cf144cf6f1e066c0ea173e6a18e79bc9e67028ae1"
                   },
                   {
                       "path":  "tools/verify.ps1",

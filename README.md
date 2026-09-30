@@ -283,8 +283,21 @@ FYP/
 | 專案定義（計劃書／需求草稿） | ✅ 已完成（4 頁計劃書） |
 | 治理規則（R1／R2、護欄、驗證階段） | ✅ 已建立（[agent.md](agent.md) ＋ `tools/verify.ps1`） |
 | 驗證與漂移偵測機制 | ✅ 可用（`tools/verify.ps1` ＋ `tools/manifest.json`） |
+| 發布到 GitHub | ✅ 已發布：<https://github.com/DonutCanEat/FYP_renew>（見 §14.1） |
 | Stage 1 手動最小環境（G0／G1） | ⏳ 未開始 |
 | IaC、Infra、Automations、AI Mgmt | ⏳ 未開始 |
+
+### 14.1 發布位置（GitHub）
+
+本目錄係 monorepo（`D:\File\Program Project`）嘅子目錄，但已用 `git subtree` 抽出成獨立 repo 發布：
+
+- **Repo**：<https://github.com/DonutCanEat/FYP_renew>
+- **結構**：remote 嘅**根目錄就係 `FYP/` 嘅內容**（`README.md`、`agent.md`、`tools/`、計劃書 docx、需求草稿）
+- **本機 remote 名稱**：`fyp`（推送來源分支：`fyp-only` → remote `main`）
+- 完整推送流程、安全閥與坑位：見 [agent.md](agent.md) §2.3
+
+> ⚠️ 本機嘅 `origin` 係**另一個** repo（`umapyoi`），同本專案無關；推送一律用 `fyp` 呢個 remote，
+> 且**唔准**由 monorepo `main` 直接 push。
 
 ---
 

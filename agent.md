@@ -126,7 +126,65 @@ git commit -m "docs(agent): 補上驗證記錄要求與 manifest 更新流程"
 > 受限沙箱下可能出現 `index.lock: Permission denied`。此時**唔要**改用其他寫法繞過，
 > 而係將該次 git 指令升級權限重試一次（本專案先例：Umapyoi 同樣做法）。
 
-### 2.3 建議嘅 commit 顆粒度（示例）
+### 2.3 發布到 GitHub（獨立 repo：`FYP_renew`）
+
+本目錄係 monorepo（`D:\File\Program Project`）嘅子目錄，但已**獨立發布**到
+**<https://github.com/DonutCanEat/FYP_renew>**（首次推送：2026，3 個 commit、7 個檔案）。
+
+**已設定好嘅東西**（唔需要每次重建）：
+
+| 項目 | 值 |
+| --- | --- |
+| remote 名稱 | `fyp` → `https://github.com/DonutCanEat/FYP_renew.git` |
+| 推送來源分支 | `fyp-only`（本機鏡像，**track `fyp/main`**） |
+| remote 分支 | `main`（＝ `fyp-only` 嘅內容，**repo 根目錄就係 `FYP/` 嘅內容**） |
+
+**標準推送流程**（先 commit 落 monorepo，再發布）：
+
+```powershell
+cd "D:\File\Program Project"
+
+# ① 確認 FYP 已經 commit（subtree split 只切得到已 commit 嘅內容！）
+git status --short FYP
+
+# ② 重新 split，做內容安全閥
+git subtree split -P FYP -b fyp-tmp
+$splitTree = (git rev-parse ('fyp-tmp' + '^{tree}')).Trim()
+$fypTree   = (git rev-parse ('HEAD:FYP')).Trim()
+if ($splitTree -ne $fypTree) { throw "安全閥失敗：split 內容同 HEAD:FYP 唔一致，停手" }
+
+# ③ 以 split 內容更新鏡像分支，再推
+git branch -f fyp-only fyp-tmp
+git push fyp fyp-only:main
+
+# ④ 清理臨時分支
+git branch -D fyp-tmp
+```
+
+**推送後必做**（唔好只信「push 成功」）：
+
+```powershell
+git fetch fyp "+refs/heads/*:refs/remotes/fyp/*"
+git log --oneline -3 fyp/main
+git ls-tree -r --name-only fyp/main        # 清單必須同 FYP/ 一致，且冇 _reports/
+git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
+```
+
+**易踩嘅坑**：
+
+1. **`git subtree split` 只切得到已 commit 嘅歷史**。改完未 commit 就 split，出嚟嘅內容仍然係上一個 commit
+   （症狀：remote 收到舊版檔案，但推送「成功」）→ 一定要先 commit（即 R2）再 split。
+2. **`git push fyp fyp-only:main` 係用本機覆蓋 remote**。推之前一定要睇 `git diff --stat fyp/main fyp-only`；
+   若差異包含「我今次冇改嘅內容」，代表 remote 有本機冇嘅嘢，**停手查清楚**，唔准強推。
+3. **唔准**由 monorepo `main` 直接 push／pull 呢個 remote（`main` 內含 `TimeMate`、`Umapyoi` 等其他專案，
+   同 `FYP_renew` 完全無關）。推送只用 `fyp-only:main` 呢個明確 refspec。
+4. `origin` 係**另一個** repo（`umapyoi`），同本目錄無關，唔好撳錯。
+5. 沙箱下 `git ls-remote`／`fetch`／`push` 會因**冇網絡**而報 `schannel: AcquireCredentialsHandle failed:
+   SEC_E_NO_CREDENTIALS`——呢個係沙箱封網嘅表現，唔係 GitHub 或憑證問題：**將該次網絡指令升級權限重試一次**即可。
+6. `_reports/` 由 `FYP/.gitignore` 排除，**唔會**隨 split 推上去；推完可以用
+   `git ls-tree -r --name-only fyp/main` 快速確認。
+
+### 2.4 建議嘅 commit 顆粒度（示例）
 
 | 改動 | 應該拆成 |
 | --- | --- |
@@ -264,6 +322,7 @@ git commit -m "docs(agent): 補上驗證記錄要求與 manifest 更新流程"
 | 加 MCP 工具 | ① 先寫權限邊界測試（9 類）同拒絕路徑 → ② 實作（唯讀優先）→ ③ 跑評估套件 → ④ `feat(...)` commit |
 | 改 AI 嘅變更流程 | ① 確認五步鏈完整（提案→批准→一次性 token→執行→稽核）→ ② 驗雜湊鏈完整性 → ③ 跑 9 個邊界測試 → ④ commit |
 | 懷疑有人未經記錄改嘢 | `verify.ps1 -Stage B`（hash 對唔上就係漂移）→ 查 `git log --oneline -- FYP` |
+| 發布到 GitHub（`FYP_renew`） | ① 先 `git commit`（R2）→ ② `git subtree split -P FYP -b fyp-tmp` ＋ tree 安全閥 → ③ `git branch -f fyp-only fyp-tmp` → ④ `git push fyp fyp-only:main` → ⑤ fetch 後核對（見 §2.3） |
 | 交報告／示範 | `verify.ps1 -Stage D`，並引用 `_reports/` 嘅記錄；`D8` 測試報告要貼失敗→修正→通過嘅完整過程 |
 
 ---
@@ -296,6 +355,7 @@ git commit -m "docs(agent): 補上驗證記錄要求與 manifest 更新流程"
 | `verify.ps1` FAIL：`未登記檔案` | 新增檔案未入 manifest | 同上；若係產生物，應改成唔入版控 |
 | `verify.ps1` FAIL：`Markdown 連結指唔到` | 連結目標檔名／路徑錯 | 修好連結；唔准刪走該檢查 |
 | `index.lock: Permission denied` | 沙箱限制，`git` 要寫 workspace 以外嘅 `.git` | 該次 git 指令**升級權限重試一次**，唔要另找繞路 |
+| `schannel: AcquireCredentialsHandle failed: SEC_E_NO_CREDENTIALS` | 沙箱**封鎖網絡**（唔係 GitHub／憑證問題） | 將該次 `git ls-remote`／`fetch`／`push` **升級權限重試一次**（見 §2.3-5） |
 | `git add -A` 見到其他專案檔案 | monorepo 特性 | 取消，改用明確路徑（見 §2.2-④） |
 | 驗證 PASS 但功能唔正常 | 檢查項目不足 | **加檢查項目**（唔准入版控例外），再重跑；呢個係改善驗證，唔係放寬驗證 |
 
