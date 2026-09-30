@@ -1,0 +1,25 @@
+With in AI/MCP/LLM:
+- Windows Server ( 4 VMs (2 Command line + 1 GUI) + (1 client) )
+  - AD
+- Linux (3 VMs)
+  - Services (DHCP/Container[OCI]/Nginx/nftables/VPN[WireGuard/OpenVPN]/LDAP/Mail)
+  - Redundancy (Keepalived+k8s)
+- Cisco (4 routers+ 2 switches)
+  - Protocols (OSPF+EIGRP/DMVPN/eBGP+iBGP) + (HSRP/RSTP/DHCP)
+
+
+Hybrid Network Environment
+
+Construct a Windows/Linux/Cisco network
+Manage, monitor by AI { Prometheus + Grafana }
+Automations/Scripting by AI { Ansible/PowerShell }
+*** IaC (Infrastructure as Code)
+Using LLM get status/update/fix { API/Local LLM }
+
+ESXi / Proxmox VE (Hypervisor 1)
+
+--
+Manual deploy --> IaC --> Infra --> Automations --> Network Monitoring/Network Management by AI
+
+
+
