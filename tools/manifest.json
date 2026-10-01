@@ -10,11 +10,19 @@
                   },
                   {
                       "path":  "agent.md",
-                      "sha256":  "30af3fe2d2edf8b70580865750c7f8e6a36b5360fc2eced0710e0f1251ca457a"
+                      "sha256":  "2e0f841fbccc54f85abf95cb64e744855f8c94318ebbf5429c1ea12a131b5655"
+                  },
+                  {
+                      "path":  "LEARNING_GUIDE.md",
+                      "sha256":  "1fcb8a0ae1569175037a9724434d0f58dcf93ab6ccce348fee6f6623328f568e"
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "5ff1755f986a97f97ce7543cf144cf6f1e066c0ea173e6a18e79bc9e67028ae1"
+                      "sha256":  "62ac72441862213429893671b2d1faa666695d5a00ff33faa6d6c2443ae04ac3"
+                  },
+                  {
+                      "path":  "STUDY_PLAN.md",
+                      "sha256":  "9659bd47812c15dd623ed9590144b3795cd3af26296f04319b2c06e82af77117"
                   },
                   {
                       "path":  "tools/verify.ps1",

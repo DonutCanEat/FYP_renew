@@ -301,6 +301,8 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 | --- | --- | --- |
 | `README.md` | 專案入口：目標、規模、五階段、評估、路線圖、驗證方式 | ✅（改完要跑驗證） |
 | `agent.md` | 本檔：Agent 工作守則、R1／R2、護欄、驗證階段 | ✅（同上） |
+| `LEARNING_GUIDE.md` | 學習用手冊：全專案概念逐項「一句人話＋比喻＋目標級別」 | ✅（改完要跑驗證） |
+| `STUDY_PLAN.md` | 12 週學習計劃：逐週目標、實作、證據、自測題、資源 | ✅（同上） |
 | `tools/verify.ps1` | **唯一驗證入口**（Stage A／B／D） | ✅（改完即刻用新舊結果對照） |
 | `tools/manifest.json` | 入版控檔案嘅 SHA-256 清單（漂移偵測） | ❌ 只准 `-WriteManifest` 產生 |
 | `_reports/` | 驗證記錄（產生物） | ❌ 不入版控 |

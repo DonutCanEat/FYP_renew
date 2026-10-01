@@ -264,6 +264,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tools/verify.ps1 -Note "簡述今�
 FYP/
   README.md                                       本檔：專案入口（目標、規模、流程、評估、驗證）
   agent.md                                        AI Agent 工作守則：R1 驗證、R2 每次改動一個 commit、護欄
+  LEARNING_GUIDE.md                               名詞解釋手冊：每個概念「一句人話＋比喻＋要識到幾深」（L1／L2／L3 分級）
+  STUDY_PLAN.md                                   12 週學習計劃：逐週目標／實作任務／產出證據／自測題
   tools/
     verify.ps1                                    唯一驗證入口（Stage A／B／D，含 manifest 漂移偵測）
     manifest.json                                 入版控檔案嘅 SHA-256 清單（由 -WriteManifest 產生）
@@ -286,6 +288,8 @@ FYP/
 | 發布到 GitHub | ✅ 已發布：<https://github.com/DonutCanEat/FYP_renew>（見 §14.1） |
 | Stage 1 手動最小環境（G0／G1） | ⏳ 未開始 |
 | IaC、Infra、Automations、AI Mgmt | ⏳ 未開始 |
+
+> **團隊學習用**：全專案名詞解釋同比喻見 [LEARNING_GUIDE.md](LEARNING_GUIDE.md)；12 週逐週學習計劃見 [STUDY_PLAN.md](STUDY_PLAN.md)。
 
 ### 14.1 發布位置（GitHub）
 
