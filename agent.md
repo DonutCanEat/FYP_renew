@@ -1,7 +1,7 @@
 # agent.md ─ AI Agent 工作守則與驗證規範
 
 > 專案：**Victor2 ── Enterprise Network Infrastructure and Architect**（HDTN 畢業專案／FYP）
-> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills 2026・IT Network Systems Administration（Skill 2447）
+> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills 2026・IT Network Systems Administration（Skill 39）
 > 對象：任何在本目錄工作的 AI agent（以及未來的自己）
 > 語言：文件、註解、commit 訊息一律**繁體中文**；程式識別字（變數／函式／檔名）一律英文。
 
@@ -259,18 +259,19 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 - **幻覺檢查**：對唔存在嘅主機／服務／網段提問，AI 必須承認唔存在。
 - **漂移與稽核完整性**：漂移誤報檢查 ＋ 稽核記錄 `100%` 覆蓋。
 
-### 4.4 12 週路線圖
+### 4.4 五學期路線圖
 
-| 週 | 重點 | 關卡 |
+| 學期 | 重點 | 關卡 |
 | --- | --- | --- |
-| W1 | 平台選型、Git 設定、基線模板、手動最小環境 | G0：Base Setup Passed |
-| W2–W3 | 首台 Cisco 可達、Win AD 部署、初步監控 | G1：Device Reachability |
-| W4–W6 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | G2-H：Automation & Model Spike |
-| W7–W8 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | G3：AI Read-Only Plane |
-| W9–W10 | AI 診斷、漂移檢查、問答、已批准變更、跑評估套件 | G4：Evaluation & Guardrails |
-| W11–W12 | 全面驗證、報告定稿、executive summary、最終示範 | G5／G6：Final Project Acceptance |
+| Sem 1 | 平台選型、Git 設定、基線模板、手動最小環境、IP 規劃與服務目錄 | G0：Base Setup Passed |
+| Sem 2 | 首台 Cisco 可達、Win AD 部署、初步監控 | G1：Device Reachability |
+| Sem 3 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | G2-H：Automation & Model Spike |
+| Sem 4 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | G3：AI Read-Only Plane |
+| Sem 5 | AI 診斷、漂移檢查、問答、已批准變更、評估套件、全面驗證、報告定稿、最終示範 | G4／G5／G6：Final Project Acceptance |
 
-> **W9 技術凍結（Technical Freeze）**：W9 之後唔再加新功能，只做測試與文件。**Agent 在 W9 後不得新增功能程式碼**，除非使用者明確解除凍結。
+> **Sem 5 技術凍結（Technical Freeze）**：Sem 5 之後唔再加新功能，只做測試與文件。**Agent 在 Sem 5 後不得新增功能程式碼**，除非使用者明確解除凍結。
+> **學習配套**：每個學期嘅學習內容、單元與證據要求見 `STUDY_PLAN.md`；名詞解釋與比喻見 `LEARNING_GUIDE.md`。
+> **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準。
 
 ### 4.5 角色與交付
 
@@ -287,10 +288,10 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 
 | 風險 | 緩解 |
 | --- | --- |
-| Cisco 平台不可達 | W3 前證明 1 台實體設備 SSH＋SNMPv3 可達；失敗就轉 hybrid／備案 |
+| Cisco 平台不可達 | Sem 2 前證明 1 台實體設備 SSH＋SNMPv3 可達；失敗就轉 hybrid／備案 |
 | 模型 tool calling 弱 | 先用 malformed-call rate 前測選模型；必要時縮小用例 |
 | 硬件不足 | CPU fallback；LLM **唔可以**同被管基建放埋一齊 |
-| 範圍蔓延 | W9 技術凍結；之後只做測試與文件 |
+| 範圍蔓延 | Sem 5 技術凍結；之後只做測試與文件 |
 | Packet Tracer 假報告 | 只當設計工具；禁止聲稱對 PT 有 AI／自動化管理 |
 
 ---
@@ -302,7 +303,7 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 | `README.md` | 專案入口：目標、規模、五階段、評估、路線圖、驗證方式 | ✅（改完要跑驗證） |
 | `agent.md` | 本檔：Agent 工作守則、R1／R2、護欄、驗證階段 | ✅（同上） |
 | `LEARNING_GUIDE.md` | 學習用手冊：全專案概念逐項「一句人話＋比喻＋目標級別」 | ✅（改完要跑驗證） |
-| `STUDY_PLAN.md` | 12 週學習計劃：逐週目標、實作、證據、自測題、資源 | ✅（同上） |
+| `STUDY_PLAN.md` | 五學期學習計劃（零基礎版）：Sem 0 暖身、Sem 1–5 單元、證據、自測題、資源 | ✅（同上） |
 | `tools/verify.ps1` | **唯一驗證入口**（Stage A／B／D） | ✅（改完即刻用新舊結果對照） |
 | `tools/manifest.json` | 入版控檔案嘅 SHA-256 清單（漂移偵測） | ❌ 只准 `-WriteManifest` 產生 |
 | `_reports/` | 驗證記錄（產生物） | ❌ 不入版控 |

@@ -1,6 +1,6 @@
 # Victor2 ── Enterprise Network Infrastructure and Architect
 
-**HDTN 畢業專案（FYP）｜4 位學生｜12 週｜Vertex Peak Financial Technologies Limited（FinTech／InsurTech）情境｜對標 WorldSkills 2026・IT Network Systems Administration（Skill 2447）**
+**HDTN 畢業專案（FYP）｜4 位學生｜5 個學期｜Vertex Peak Financial Technologies Limited（FinTech／InsurTech）情境｜對標 WorldSkills 2026・IT Network Systems Administration（Skill 39）**
 
 用一座 **Windows／Linux／Cisco 混合網絡**，示範「**人手部署 ➜ IaC ➜ 基建 ➜ 自動化 ➜ 由 AI／MCP／LLM 監控與管理**」呢條完整演進路線。
 專案嘅賣點唔係「砌到一個網絡」，而係**砌到一個可以被 AI 安全地管理、而且每一步都有證據嘅網絡**。
@@ -207,18 +207,19 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tools/verify.ps1 -Note "簡述今�
 
 ---
 
-## 9. 12 週路線圖與關卡
+## 9. 五學期路線圖與關卡
 
-| 週 | 重點工作 | 關卡里程碑 |
+| 學期 | 重點工作 | 關卡里程碑 |
 | --- | --- | --- |
-| W1 | 平台選型、Git 設定、基線模板、手動最小環境 | **G0：Base Setup Passed** |
-| W2–W3 | 首台 Cisco 可達、Win AD 部署、初步監控 | **G1：Device Reachability** |
-| W4–W6 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | **G2-H：Automation & Model Spike** |
-| W7–W8 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | **G3：AI Read-Only Plane** |
-| W9–W10 | AI 診斷、漂移檢查、問答、已批准變更、跑評估套件 | **G4：Evaluation & Guardrails** |
-| W11–W12 | 全面驗證、報告定稿、executive summary、最終示範 | **G5／G6：Final Project Acceptance** |
+| Sem 1 | 平台選型、Git 設定、基線模板、手動最小環境、IP 規劃與服務目錄 | **G0：Base Setup Passed** |
+| Sem 2 | 首台 Cisco 可達、Win AD 部署、初步監控 | **G1：Device Reachability** |
+| Sem 3 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | **G2-H：Automation & Model Spike** |
+| Sem 4 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | **G3：AI Read-Only Plane** |
+| Sem 5 | AI 診斷、漂移檢查、問答、已批准變更、評估套件、全面驗證、報告定稿、最終示範 | **G4／G5／G6：Final Project Acceptance** |
 
-> **W9 技術凍結**：W9 之後唔再加新功能，只做測試與文件。
+> **Sem 5 技術凍結**：Sem 5 之後唔再加新功能，只做測試與文件。
+> **學習配套**：每個學期嘅學習內容、單元同證據要求，見 [STUDY_PLAN.md](STUDY_PLAN.md)。
+> **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準，docx 待更新。
 
 ---
 
@@ -237,10 +238,10 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tools/verify.ps1 -Note "簡述今�
 
 | 主要風險 | 緩解策略 |
 | --- | --- |
-| Cisco 平台不可達 | W3 前證明 1 台實體設備可用 SSH＋SNMPv3 存取；失敗就轉 hybrid／備案 |
+| Cisco 平台不可達 | Sem 2 前證明 1 台實體設備可用 SSH＋SNMPv3 存取；失敗就轉 hybrid／備案 |
 | 模型 tool calling 弱 | 先用 malformed-call rate 前測選模型；必要時縮小用例範圍 |
 | 硬件不足 | CPU fallback；確保 LLM **唔會**同被管基建共用同一台機 |
-| 範圍蔓延 | W9 嚴格技術凍結；之後專注測試與文件 |
+| 範圍蔓延 | Sem 5 嚴格技術凍結；之後專注測試與文件 |
 | Packet Tracer 假報告 | 只作設計工具；**禁止**聲稱對 PT 有 AI／自動化管理 |
 
 ---
@@ -265,7 +266,7 @@ FYP/
   README.md                                       本檔：專案入口（目標、規模、流程、評估、驗證）
   agent.md                                        AI Agent 工作守則：R1 驗證、R2 每次改動一個 commit、護欄
   LEARNING_GUIDE.md                               名詞解釋手冊：每個概念「一句人話＋比喻＋要識到幾深」（L1／L2／L3 分級）
-  STUDY_PLAN.md                                   12 週學習計劃：逐週目標／實作任務／產出證據／自測題
+  STUDY_PLAN.md                                   五學期學習計劃（Sem 0–Sem 5）：單元／實作任務／產出證據／自測題
   tools/
     verify.ps1                                    唯一驗證入口（Stage A／B／D，含 manifest 漂移偵測）
     manifest.json                                 入版控檔案嘅 SHA-256 清單（由 -WriteManifest 產生）
@@ -289,7 +290,7 @@ FYP/
 | Stage 1 手動最小環境（G0／G1） | ⏳ 未開始 |
 | IaC、Infra、Automations、AI Mgmt | ⏳ 未開始 |
 
-> **團隊學習用**：全專案名詞解釋同比喻見 [LEARNING_GUIDE.md](LEARNING_GUIDE.md)；12 週逐週學習計劃見 [STUDY_PLAN.md](STUDY_PLAN.md)。
+> **團隊學習用**：全專案名詞解釋同比喻見 [LEARNING_GUIDE.md](LEARNING_GUIDE.md)；五學期學習計劃（零基礎版，Sem 0 至 Sem 5）見 [STUDY_PLAN.md](STUDY_PLAN.md)。
 
 ### 14.1 發布位置（GitHub）
 
@@ -307,7 +308,7 @@ FYP/
 
 ## 15. 下一步
 
-1. **W1**：決定 Hypervisor（ESXi／Proxmox VE）、建立 Git 基線、定好 IP 規劃與服務目錄（Documentation MCP 嘅資料來源）。
+1. **Sem 1**：決定 Hypervisor（ESXi／Proxmox VE）、建立 Git 基線、定好 IP 規劃與服務目錄（Documentation MCP 嘅資料來源）。
 2. **Stage 1**：手動砌最小環境（1 Win AD、1 Linux、1 Cisco、1 Prometheus），並保存**完整命令 transcript**（G0／G1 證據）。
 3. 每次實作都要走 §8.3 流程：**先驗證、後 commit**。
 4. 新增任何目錄／工具，都要同步更新本檔、[agent.md](agent.md)、`tools/manifest.json`。
