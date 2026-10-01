@@ -753,13 +753,14 @@
 | 名詞 | 係咩 | 你要知嘅 |
 | --- | --- | --- |
 | HDTN FYP | 香港高級文憑嘅畢業專案 | 5 個學期、4 人一組、有評分標準 |
-| 官方題目文件 | `AY2627_FYP topics_v2_Victor Li.docx`：3 條題目（Victor1 IoT logger／Victor2 企業網絡／Victor3 SDN） | 我哋揀嘅係**第 2 題：Victor2. Enterprise network infrastructure in AI Era** |
+| 官方題目頁（**最新版**） | `Victor2_Topic_AY2627_Detailed.png`：**Victor2 ─ Enterprise Network Infrastructure and Architect**（AY2026/27） | 呢個就係我哋做嘅題目；技術清單以佢為準 |
+| 較早版本題目文件 | `AY2627_FYP topics_v2_Victor Li.docx`：3 條題目（Victor1 IoT logger／Victor2 企業網絡／Victor3 SDN） | 只作背景參考，內容以最新題目頁為準 |
 | Vertex Peak Financial Technologies Limited | **虛構**嘅情境公司（FinTech／InsurTech） | 因為係金融科技，所以特別重視安全、合規、稽核 |
-| WorldSkills Occupational Standards 2024 | 世界技能大賽「IT Network Systems Administration」職業標準 | 官方題目文件列明嘅參考標準（**Skill 39**） |
-| 官方要求嘅 8 項技術 | Windows Services／Linux Services／Cisco Networking／Infrastructure monitoring／Automations／**Disaster Recovery**／**Visualization**／AI Agents, Skills and MCP | 你可以照住呢個清單去學，唔會學漏 |
+| WorldSkills Occupational Standards 2026 | 世界技能大賽「IT Network Systems Administration」職業標準 | 官方題目頁列明嘅參考標準（**Skill 39**，老師確認） |
+| 官方要求嘅 5 大類技術 | ① Microsoft Server Networking／Network Services（ADDS、FSRM、iSCSI、RRAS、IKEv2）② Linux Server Administrations（Nginx、Keepalived、nftables、OpenVPN／WireGuard）③ Cisco Networking（BGP、OSPF、EIGRP、RSTP、ASA）④ Network Automation（PowerShell、Ansible Playbook、Bash）⑤ AI Network Management（Agentic AI、OpenClaw Skills） | 你可以照住呢 5 類去學，唔會學漏 |
 
-**比喻**：WorldSkills 就係「廚藝比賽嘅指定菜式清單」。你唔需要識全世界嘅菜，但清單上嗰幾味（8 項）一定要煮得出，仲要煮得穩定。
-**特別留意**：**Disaster Recovery（災難復原）** 同 **Visualization（視覺化）** 係好多組會漏嘅兩項 —— 記住「可以由 IaC 重建」就係最基本嘅 DR，Grafana 儀表板＋拓撲圖就係 Visualization。
+**比喻**：WorldSkills 就係「廚藝比賽嘅指定菜式清單」。你唔需要識全世界嘅菜，但清單上嗰 5 類一定要煮得出，仲要煮得穩定。
+**額外留意**：我哋計劃書另外要求 **監控（Prometheus／Grafana）、災難復原（DR）、視覺化（Visualization）** —— 記住「可以由 IaC 重建」就係最基本嘅 DR，Grafana 儀表板＋拓撲圖就係 Visualization。
 
 ---
 

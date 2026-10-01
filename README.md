@@ -2,8 +2,9 @@
 
 **HDTN 畢業專案（FYP）｜4 位學生｜5 個學期｜Vertex Peak Financial Technologies Limited（FinTech／InsurTech）情境**
 
-> **官方題目**：**Victor2. Enterprise network infrastructure in AI Era**（出自 `AY2627_FYP topics_v2_Victor Li.docx` 第 2 題）
-> **標準**：WorldSkills Occupational Standards 2024 ─ IT Network Systems Administration（Skill 39）
+> **官方題目（最新版）**：**Victor2 ─ Enterprise Network Infrastructure and Architect**（`Victor2_Topic_AY2627_Detailed.png`，HDTN Final Year Project Topic AY2026/27）
+> **標準**：WorldSkills Occupational Standards **2026** ─ IT Network Systems Administration（**Skill 39**；老師確認）
+> **較早版本**：`AY2627_FYP topics_v2_Victor Li.docx`（3 條題目總覽，我哋揀第 2 題）—— 內容一律以最新版為準。
 
 用一座 **Windows／Linux／Cisco 混合網絡**，示範「**人手部署 ➜ IaC ➜ 基建 ➜ 自動化 ➜ 由 AI／MCP／LLM 監控與管理**」呢條完整演進路線。
 專案嘅賣點唔係「砌到一個網絡」，而係**砌到一個可以被 AI 安全地管理、而且每一步都有證據嘅網絡**。
@@ -18,7 +19,7 @@
 | 問題 | 答案 |
 | --- | --- |
 | 做咩？ | 建構並管理一個跨 Windows／Linux／Cisco 嘅企業混合網絡 |
-| 官方規定要覆蓋咩？ | 8 項：Windows Services、Linux Services、Cisco Networking、Infrastructure monitoring、Automations、**Disaster Recovery**、**Visualization**、AI Agents／Skills／MCP（分工與證據見 [STUDY_PLAN.md](STUDY_PLAN.md) §0.2） |
+| 官方規定要覆蓋咩？ | 5 大類：**Microsoft Server Networking／Network Services**（ADDS、FSRM、iSCSI、RRAS、IKEv2）、**Linux Server Administrations**（Nginx、Keepalived、nftables、OpenVPN／WireGuard）、**Cisco Networking**（BGP、OSPF、EIGRP、RSTP、ASA）、**Network Automation**（PowerShell、Ansible Playbook、Bash）、**AI Network Management**（Agentic AI、OpenClaw Skills）；另加本組計劃書要求：監控、災難復原、視覺化（分工與證據見 [STUDY_PLAN.md](STUDY_PLAN.md) §0.2） |
 | 點管理？ | **AI／MCP／LLM** 做觀察、關聯、解釋、提案；**變更一定要人手批准** |
 | 點保證質素？ | IaC 可重建、自動化幂等、監控先於 AI、稽核 100% 覆蓋 |
 | 點算成功？ | 見 §5 成功準則（三族可達、可重建、零漂移、唯讀診斷、審批式變更、文件齊全） |
@@ -275,9 +276,10 @@ FYP/
     verify.ps1                                    唯一驗證入口（Stage A／B／D，含 manifest 漂移偵測）
     manifest.json                                 入版控檔案嘅 SHA-256 清單（由 -WriteManifest 產生）
   _reports/                                       驗證記錄（產生物，不入版控）
+  Victor2_Topic_AY2627_Detailed.png               官方題目頁（**最新版**，AY2026/27；需求來源，唯讀）
   Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx   官方 4 頁計劃書（需求來源，唯讀）
   With in AIMCPLLM.txt                            原始需求草稿（範圍來源，唯讀）
-  AY2627_FYP topics_v2_Victor Li.docx             官方題目文件（3 條題目；本組選第 2 題 Victor2，需求來源，唯讀）
+  AY2627_FYP topics_v2_Victor Li.docx             較早版本題目文件（3 條題目總覽；只作背景參考）
 ```
 
 未來加入 `iac/`、`ansible/`、`mcp/`、`docs/` 等目錄時，必須同時更新本表與 [agent.md](agent.md) §5 嘅檔案職責表。

@@ -1,8 +1,8 @@
 # agent.md ─ AI Agent 工作守則與驗證規範
 
 > 專案：**Victor2 ── Enterprise Network Infrastructure and Architect**（HDTN 畢業專案／FYP）
-> 官方題目：**Victor2. Enterprise network infrastructure in AI Era**（`AY2627_FYP topics_v2_Victor Li.docx` 第 2 題，唯讀需求來源）
-> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills Occupational Standards 2024・IT Network Systems Administration（Skill 39）
+> 官方題目（最新版）：**Victor2 ─ Enterprise Network Infrastructure and Architect**（`Victor2_Topic_AY2627_Detailed.png`，HDTN FYP Topic AY2026/27，唯讀需求來源）
+> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills Occupational Standards **2026**・IT Network Systems Administration（**Skill 39**）
 > 對象：任何在本目錄工作的 AI agent（以及未來的自己）
 > 語言：文件、註解、commit 訊息一律**繁體中文**；程式識別字（變數／函式／檔名）一律英文。
 
@@ -311,7 +311,8 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 | `_reports/` | 驗證記錄（產生物） | ❌ 不入版控 |
 | `Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx` | 官方 4 頁計劃書（需求來源，**唯讀基準**） | ❌ 只讀 |
 | `With in AIMCPLLM.txt` | 原始需求草稿（範圍來源） | ❌ 只讀 |
-| `AY2627_FYP topics_v2_Victor Li.docx` | 官方題目文件：3 條題目，本組選第 2 題 Victor2（**需求來源**） | ❌ 只讀 |
+| `Victor2_Topic_AY2627_Detailed.png` | **最新版官方題目頁**：Victor2（AY2026/27）技術清單＋標準參考 | ❌ 只讀 |
+| `AY2627_FYP topics_v2_Victor Li.docx` | 較早版本題目文件：3 條題目總覽（只作背景參考） | ❌ 只讀 |
 
 > 未來嘅 IaC／playbook／MCP 目錄（例如 `iac/`、`ansible/`、`mcp/`、`docs/`）加入時，
 > **必須**同時更新本表、`README.md` 嘅目錄結構、以及 `tools/verify.ps1` 嘅檢查範圍。

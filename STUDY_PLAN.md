@@ -1,6 +1,6 @@
 # Victor2 FYP 五學期學習計劃（零基礎版）
 
-> 題目：**Victor2. Enterprise network infrastructure in AI Era**（官方題目文件第 2 題）
+> 題目（最新版官方題目頁）：**Victor2 ─ Enterprise Network Infrastructure and Architect**（`Victor2_Topic_AY2627_Detailed.png`，AY2026/27）
 > 對象：**完全冇概念**嘅隊友
 > 結構：**Sem 1 全隊一齊學晒所有基礎** → **Sem 2–5 各自做返自己嗰 part（並行）＋ 每學期尾整合檢查點**
 > 配套文件：[LEARNING_GUIDE.md](LEARNING_GUIDE.md)（名詞「一句人話＋比喻」）｜[README.md](README.md)（專案入口）｜[agent.md](agent.md)（工作守則）
@@ -30,21 +30,27 @@
 
 ### 0.2 官方題目要求 ↔ 邊個角色負責（唔可以漏）
 
-官方題目文件列明要學／要做嘅 8 項技術，同我哋嘅分工對照：
+**以最新版題目頁（`Victor2_Topic_AY2627_Detailed.png`）為準**；較早嘅 `AY2627_FYP topics_v2_Victor Li.docx` 只作背景參考。
 
-| # | 官方要求 | 主責 | 我哋點覆蓋 | 證據 |
-| --- | --- | --- | --- | --- |
-| 1 | Windows Services | S2 | AD、DNS、DHCP、GPO、安全原則、客戶端 | transcript＋AD/GPO 截圖 |
-| 2 | Linux Services | S3 | DHCP、容器（OCI）、Nginx、nftables、VPN、LDAP、Mail | 服務清單＋測試輸出 |
-| 3 | Cisco Networking | S1 | 4 Router ＋ 2 Switch、OSPF／EIGRP／DMVPN／eBGP＋iBGP、HSRP／RSTP | show 輸出＋transcript |
-| 4 | Infrastructure monitoring | S3 | Prometheus＋Grafana＋SNMP／syslog | targets UP＋儀表板 |
-| 5 | Automations | S4 | Ansible＋PowerShell＋Git | playbook＋幂等證明 |
-| 6 | **Disaster Recovery** | S1／S2／S3 各自＋S4 記錄 | IaC 重建、Keepalived 切換、DC 還原、路由備援演練 | 演練報告（前後對照） |
-| 7 | **Visualization** | S3 | Grafana 儀表板＋拓撲圖 | 圖＋截圖 |
-| 8 | AI Agents, Skills, and MCP | S4 | 本地 LLM＋5 個 MCP server＋護欄 | 跨族問答＋稽核記錄 |
+| # | 官方要求（最新題目頁） | 具體技術例子 | 主責 | 我哋點覆蓋 | 證據 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Microsoft Server Networking and Network Services | ADDS、FSRM、iSCSI、RRAS、IKEv2 | S2 | AD 網域、檔案／儲存服務、遠端存取、站點 VPN | transcript＋截圖 |
+| 2 | Linux Server Administrations | Nginx、Keepalived、nftables、OpenVPN／WireGuard | S3 | Linux 服務機：網頁、防火牆、VPN、高可用 | 服務清單＋測試輸出 |
+| 3 | Cisco Networking | BGP、OSPF、EIGRP、RSTP、ASA | S1 | 4 Router＋2 Switch：路由／交換／防火牆 | show 輸出＋transcript |
+| 4 | Network Automation | PowerShell scripting、Ansible Playbook、Bash shell scripting | S4 主導；S1／S2／S3 各寫自己嗰套腳本 | IaC＋自動化共用一個 Git repo；幂等驗收 | playbook＋二次執行零漂移 |
+| 5 | AI Network Management | Agentic AI、OpenClaw Skills | S4 | 本地 LLM＋5 個 MCP server＋審批式變更護欄 | 跨族問答＋稽核記錄 |
 
-> 官方另外要求交付 **findings、manuals、steps、verifications、best practices／standards、references** —— 對應我哋嘅 D7 手冊、D8 測試報告、D9 稽核證據、D10 參考架構。
-> 標準出處：**WorldSkills Occupational Standards 2024 ─ IT Network Systems Administration（Skill 39）**。
+**本組計劃書額外要求**（出自 4 頁計劃書同需求草稿；最新題目頁冇列出，但照做）：
+
+| 額外要求 | 主責 | 證據 |
+| --- | --- | --- |
+| Infrastructure monitoring（Prometheus／Grafana／SNMP／syslog） | S3 | targets UP＋儀表板 |
+| Disaster Recovery（IaC 重建、Keepalived 切換、DC 還原、路由備援） | S1／S2／S3 各自＋S4 記錄 | 演練報告（前後對照） |
+| Visualization（Grafana 儀表板、拓撲圖） | S3 | 圖＋截圖 |
+
+> 官方要求交付 **findings、manuals、steps、screen captures、verifications、references** —— 對應 D7 手冊、D8 測試報告、D9 稽核證據、D10 參考架構（**screen captures 要當正式證據保存**）。
+> **要查清楚嘅新名詞**（Sem 4 前）：**Agentic AI**（會自己規劃多步嘅 AI agent）同 **OpenClaw Skills**（題目指定嘅技能包）—— 搵官方文件確認係咩、點用。
+> **標準出處**：WorldSkills Occupational Standards **2026** ─ IT Network Systems Administration（**Skill 39**，老師確認）。
 
 ---
 

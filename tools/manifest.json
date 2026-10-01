@@ -10,27 +10,23 @@
                   },
                   {
                       "path":  "agent.md",
-                      "sha256":  "a835bc4b2da3c69a40c899f7b8d7627888ec25c2b07ec0e89ada04f43c60aa0b"
+                      "sha256":  "edf44eeabe680e6b52cc919b149fdb4d4ebb01f4aa8d2ddbd2fca0789f339a0a"
                   },
                   {
                       "path":  "AY2627_FYP topics_v2_Victor Li.docx",
                       "sha256":  "f9336ece6dd37701ad1f700d1fbf1981f95d3485acd0a76418e8d3131833adb6"
                   },
                   {
-                      "path":  "image.png",
-                      "sha256":  "c109d68cf4af8bea9b78ac7256b4453dbcde130a9f2bff30c7dfdbb1d0faaf64"
-                  },
-                  {
                       "path":  "LEARNING_GUIDE.md",
-                      "sha256":  "4f45fc2edf9f6d62bfac3d30aa6ccc77d780c53d5fa9df8247ea980bfd0aa4d4"
+                      "sha256":  "3962fc39e7b75c0b1f45bf4425ef2ddf5166b34883eed68154e8615fe54de833"
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "9f1e8318dd59e1a176015bd974bc80f3a86c7b196ab5663757c07770c9adc256"
+                      "sha256":  "74a63cd0d5ab3a8099e3cd71d221687b5dc0d82da7b7830cd853a69474acc94c"
                   },
                   {
                       "path":  "STUDY_PLAN.md",
-                      "sha256":  "bb7c15a54d04a42dc5cadf83ad565244830c19cc377ebf3cae37ddcd4d4c50fd"
+                      "sha256":  "b9e92f5967a637726dbb1b08b878c0a1e320c575d4053797578964cbb4b38edb"
                   },
                   {
                       "path":  "tools/verify.ps1",
@@ -39,6 +35,10 @@
                   {
                       "path":  "Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx",
                       "sha256":  "ec408eb33bc389e096722f769fbfaa02c001e8b8eb4b6e4b80b3a1eeee68f18d"
+                  },
+                  {
+                      "path":  "Victor2_Topic_AY2627_Detailed.png",
+                      "sha256":  "c109d68cf4af8bea9b78ac7256b4453dbcde130a9f2bff30c7dfdbb1d0faaf64"
                   },
                   {
                       "path":  "With in AIMCPLLM.txt",
