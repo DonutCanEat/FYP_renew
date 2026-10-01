@@ -1,7 +1,8 @@
 # agent.md ─ AI Agent 工作守則與驗證規範
 
 > 專案：**Victor2 ── Enterprise Network Infrastructure and Architect**（HDTN 畢業專案／FYP）
-> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills 2026・IT Network Systems Administration（Skill 39）
+> 官方題目：**Victor2. Enterprise network infrastructure in AI Era**（`AY2627_FYP topics_v2_Victor Li.docx` 第 2 題，唯讀需求來源）
+> 情境：Vertex Peak Financial Technologies Limited（FinTech／InsurTech）｜標準：WorldSkills Occupational Standards 2024・IT Network Systems Administration（Skill 39）
 > 對象：任何在本目錄工作的 AI agent（以及未來的自己）
 > 語言：文件、註解、commit 訊息一律**繁體中文**；程式識別字（變數／函式／檔名）一律英文。
 
@@ -263,12 +264,13 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 
 | 學期 | 重點 | 關卡 |
 | --- | --- | --- |
-| Sem 1 | 平台選型、Git 設定、基線模板、手動最小環境、IP 規劃與服務目錄 | G0：Base Setup Passed |
-| Sem 2 | 首台 Cisco 可達、Win AD 部署、初步監控 | G1：Device Reachability |
-| Sem 3 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | G2-H：Automation & Model Spike |
-| Sem 4 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | G3：AI Read-Only Plane |
-| Sem 5 | AI 診斷、漂移檢查、問答、已批准變更、評估套件、全面驗證、報告定稿、最終示範 | G4／G5／G6：Final Project Acceptance |
+| Sem 1 | **共同基礎營**（全隊一齊學所有基礎）＋平台選型、Git 設定、基線模板、手動最小環境、IP 規劃與服務目錄 | G0：Base Setup Passed |
+| Sem 2 | **各自 part**：Cisco 上線、Win AD 部署、Linux 服務、初步監控 | G1：Device Reachability |
+| Sem 3 | **各自 part**：路由骨幹、完整 IaC、Infra 擴容、備援、Prometheus／Grafana、本地 LLM spike | G2-H：Automation & Model Spike |
+| Sem 4 | **各自 part**：開發 5 個 MCP server、唯讀 AI 平面 | G3：AI Read-Only Plane |
+| Sem 5 | **各自 part**：AI 診斷、漂移檢查、問答、已批准變更、Disaster Recovery 演練、評估套件、全面驗證、報告定稿、最終示範 | G4／G5／G6：Final Project Acceptance |
 
+> **運作模式**：Sem 1 全隊一齊學晒所有基礎；**Sem 2–5 各自做返自己嗰 part（並行）**，每學期尾做整合檢查點，過咗才報關卡。
 > **Sem 5 技術凍結（Technical Freeze）**：Sem 5 之後唔再加新功能，只做測試與文件。**Agent 在 Sem 5 後不得新增功能程式碼**，除非使用者明確解除凍結。
 > **學習配套**：每個學期嘅學習內容、單元與證據要求見 `STUDY_PLAN.md`；名詞解釋與比喻見 `LEARNING_GUIDE.md`。
 > **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準。
@@ -309,6 +311,7 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 | `_reports/` | 驗證記錄（產生物） | ❌ 不入版控 |
 | `Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx` | 官方 4 頁計劃書（需求來源，**唯讀基準**） | ❌ 只讀 |
 | `With in AIMCPLLM.txt` | 原始需求草稿（範圍來源） | ❌ 只讀 |
+| `AY2627_FYP topics_v2_Victor Li.docx` | 官方題目文件：3 條題目，本組選第 2 題 Victor2（**需求來源**） | ❌ 只讀 |
 
 > 未來嘅 IaC／playbook／MCP 目錄（例如 `iac/`、`ansible/`、`mcp/`、`docs/`）加入時，
 > **必須**同時更新本表、`README.md` 嘅目錄結構、以及 `tools/verify.ps1` 嘅檢查範圍。

@@ -1,6 +1,9 @@
 # Victor2 ── Enterprise Network Infrastructure and Architect
 
-**HDTN 畢業專案（FYP）｜4 位學生｜5 個學期｜Vertex Peak Financial Technologies Limited（FinTech／InsurTech）情境｜對標 WorldSkills 2026・IT Network Systems Administration（Skill 39）**
+**HDTN 畢業專案（FYP）｜4 位學生｜5 個學期｜Vertex Peak Financial Technologies Limited（FinTech／InsurTech）情境**
+
+> **官方題目**：**Victor2. Enterprise network infrastructure in AI Era**（出自 `AY2627_FYP topics_v2_Victor Li.docx` 第 2 題）
+> **標準**：WorldSkills Occupational Standards 2024 ─ IT Network Systems Administration（Skill 39）
 
 用一座 **Windows／Linux／Cisco 混合網絡**，示範「**人手部署 ➜ IaC ➜ 基建 ➜ 自動化 ➜ 由 AI／MCP／LLM 監控與管理**」呢條完整演進路線。
 專案嘅賣點唔係「砌到一個網絡」，而係**砌到一個可以被 AI 安全地管理、而且每一步都有證據嘅網絡**。
@@ -15,6 +18,7 @@
 | 問題 | 答案 |
 | --- | --- |
 | 做咩？ | 建構並管理一個跨 Windows／Linux／Cisco 嘅企業混合網絡 |
+| 官方規定要覆蓋咩？ | 8 項：Windows Services、Linux Services、Cisco Networking、Infrastructure monitoring、Automations、**Disaster Recovery**、**Visualization**、AI Agents／Skills／MCP（分工與證據見 [STUDY_PLAN.md](STUDY_PLAN.md) §0.2） |
 | 點管理？ | **AI／MCP／LLM** 做觀察、關聯、解釋、提案；**變更一定要人手批准** |
 | 點保證質素？ | IaC 可重建、自動化幂等、監控先於 AI、稽核 100% 覆蓋 |
 | 點算成功？ | 見 §5 成功準則（三族可達、可重建、零漂移、唯讀診斷、審批式變更、文件齊全） |
@@ -211,14 +215,14 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tools/verify.ps1 -Note "簡述今�
 
 | 學期 | 重點工作 | 關卡里程碑 |
 | --- | --- | --- |
-| Sem 1 | 平台選型、Git 設定、基線模板、手動最小環境、IP 規劃與服務目錄 | **G0：Base Setup Passed** |
-| Sem 2 | 首台 Cisco 可達、Win AD 部署、初步監控 | **G1：Device Reachability** |
-| Sem 3 | 完整 IaC、Infra 擴容、Prometheus／Grafana、本地 LLM spike | **G2-H：Automation & Model Spike** |
-| Sem 4 | 開發 5 個 MCP server、Ansible／PowerShell 整合、唯讀 AI 平面 | **G3：AI Read-Only Plane** |
-| Sem 5 | AI 診斷、漂移檢查、問答、已批准變更、評估套件、全面驗證、報告定稿、最終示範 | **G4／G5／G6：Final Project Acceptance** |
+| Sem 1 | **共同基礎營**（全隊一齊）：虛擬化、網絡基礎、Windows／Linux 入門、Cisco 意識、監控、自動化、Git、AI 概念；平台選型、IP 規劃與服務目錄 | **G0：Base Setup Passed** |
+| Sem 2 | **各自 part**：Cisco 上線、Win AD、Linux 服務、初步監控 | **G1：Device Reachability** |
+| Sem 3 | **各自 part**：路由骨幹、IaC／Ansible／PowerShell、備援、Prometheus／Grafana、本地 LLM spike | **G2-H：Automation & Model Spike** |
+| Sem 4 | **各自 part**：5 個 MCP server（Windows／Linux／Cisco／Monitoring／Documentation）、唯讀 AI 平面 | **G3：AI Read-Only Plane** |
+| Sem 5 | **各自 part**：審批式變更、Disaster Recovery 演練、評估套件、全面驗證、報告定稿、最終示範 | **G4／G5／G6：Final Project Acceptance** |
 
+> **運作模式**：Sem 1 全隊一齊學晒所有基礎；**Sem 2–5 各自做返自己嗰 part（並行）**，每學期尾做一次整合檢查點。詳見 [STUDY_PLAN.md](STUDY_PLAN.md)。
 > **Sem 5 技術凍結**：Sem 5 之後唔再加新功能，只做測試與文件。
-> **學習配套**：每個學期嘅學習內容、單元同證據要求，見 [STUDY_PLAN.md](STUDY_PLAN.md)。
 > **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準，docx 待更新。
 
 ---
@@ -273,6 +277,7 @@ FYP/
   _reports/                                       驗證記錄（產生物，不入版控）
   Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx   官方 4 頁計劃書（需求來源，唯讀）
   With in AIMCPLLM.txt                            原始需求草稿（範圍來源，唯讀）
+  AY2627_FYP topics_v2_Victor Li.docx             官方題目文件（3 條題目；本組選第 2 題 Victor2，需求來源，唯讀）
 ```
 
 未來加入 `iac/`、`ansible/`、`mcp/`、`docs/` 等目錄時，必須同時更新本表與 [agent.md](agent.md) §5 嘅檔案職責表。

@@ -10,19 +10,27 @@
                   },
                   {
                       "path":  "agent.md",
-                      "sha256":  "aa7f572ab695bbce335143746bc264db19b186f12b56dca3716f73120690398b"
+                      "sha256":  "a835bc4b2da3c69a40c899f7b8d7627888ec25c2b07ec0e89ada04f43c60aa0b"
+                  },
+                  {
+                      "path":  "AY2627_FYP topics_v2_Victor Li.docx",
+                      "sha256":  "f9336ece6dd37701ad1f700d1fbf1981f95d3485acd0a76418e8d3131833adb6"
+                  },
+                  {
+                      "path":  "image.png",
+                      "sha256":  "c109d68cf4af8bea9b78ac7256b4453dbcde130a9f2bff30c7dfdbb1d0faaf64"
                   },
                   {
                       "path":  "LEARNING_GUIDE.md",
-                      "sha256":  "a85d5699a79c1de729ccbe8e13e3b03199ad527f129ef5d53a07166456635209"
+                      "sha256":  "4f45fc2edf9f6d62bfac3d30aa6ccc77d780c53d5fa9df8247ea980bfd0aa4d4"
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "c177edcb050fa170185f1afefcbc2af6cf76fc829a8d37e41b6a103878627643"
+                      "sha256":  "9f1e8318dd59e1a176015bd974bc80f3a86c7b196ab5663757c07770c9adc256"
                   },
                   {
                       "path":  "STUDY_PLAN.md",
-                      "sha256":  "82c15a1b4fb9fef76a31e9dec532d20b0c48f4e71524d1d7c3b93fe696cd3ff5"
+                      "sha256":  "bb7c15a54d04a42dc5cadf83ad565244830c19cc377ebf3cae37ddcd4d4c50fd"
                   },
                   {
                       "path":  "tools/verify.ps1",

@@ -753,11 +753,13 @@
 | 名詞 | 係咩 | 你要知嘅 |
 | --- | --- | --- |
 | HDTN FYP | 香港高級文憑嘅畢業專案 | 5 個學期、4 人一組、有評分標準 |
+| 官方題目文件 | `AY2627_FYP topics_v2_Victor Li.docx`：3 條題目（Victor1 IoT logger／Victor2 企業網絡／Victor3 SDN） | 我哋揀嘅係**第 2 題：Victor2. Enterprise network infrastructure in AI Era** |
 | Vertex Peak Financial Technologies Limited | **虛構**嘅情境公司（FinTech／InsurTech） | 因為係金融科技，所以特別重視安全、合規、稽核 |
-| WorldSkills 2026 Skill 39 | 世界技能大賽「IT Network Systems Administration」項目 | 呢個係你嘅「學習大綱」同評分角度 |
-| Skill 39 常見技能範圍 | Windows Server／AD、Linux、Cisco 路由交換、網絡安全、故障排除、文件 | 你可以照住呢個清單去學，唔會學漏 |
+| WorldSkills Occupational Standards 2024 | 世界技能大賽「IT Network Systems Administration」職業標準 | 官方題目文件列明嘅參考標準（**Skill 39**） |
+| 官方要求嘅 8 項技術 | Windows Services／Linux Services／Cisco Networking／Infrastructure monitoring／Automations／**Disaster Recovery**／**Visualization**／AI Agents, Skills and MCP | 你可以照住呢個清單去學，唔會學漏 |
 
-**比喻**：WorldSkills 就係「廚藝比賽嘅指定菜式清單」。你唔需要識全世界嘅菜，但清單上嗰幾味一定要煮得出，仲要煮得穩定。
+**比喻**：WorldSkills 就係「廚藝比賽嘅指定菜式清單」。你唔需要識全世界嘅菜，但清單上嗰幾味（8 項）一定要煮得出，仲要煮得穩定。
+**特別留意**：**Disaster Recovery（災難復原）** 同 **Visualization（視覺化）** 係好多組會漏嘅兩項 —— 記住「可以由 IaC 重建」就係最基本嘅 DR，Grafana 儀表板＋拓撲圖就係 Visualization。
 
 ---
 
