@@ -193,6 +193,8 @@
 | **S3** | 裝 Linux 服務機：nginx、nftables（只開必要 port）、SSH key 登入；裝 Prometheus＋node_exporter，令第一個 target UP | 服務可用截圖＋targets UP＋一張 PromQL 結果 |
 | **S4** | 建立文件基準：IP 規劃表、服務目錄、拓撲圖入 docs/；整理 Git／驗證流程；準備本地 LLM 環境 | docs/ 文件＋verify PASS＋LLM 跑得起嘅截圖 |
 
+**本學期覆蓋嘅官方技術**：Cisco 基本設定（S1）｜ADDS、DNS、DHCP（S2）｜Nginx、nftables（S3）｜文件與基準（S4）
+
 **整合檢查點（Sem 2 最後兩星期）**
 
 1. 三族互相 ping（Windows ↔ Linux ↔ Cisco）
@@ -223,6 +225,8 @@
 | **S3** | Linux 自動化：用 Ansible roles 管服務；設定 **Keepalived 備援**；Prometheus alert rules＋第一塊 Grafana 儀表板（Visualization） | roles＋備援切換實測＋alert 觸發記錄＋儀表板截圖 |
 | **S4** | 建立 Ansible 框架同 Git 目錄結構（IaC 同自動化共用同一個 repo）；做**本地 LLM spike**：20 次工具呼叫測試、計 malformed-call rate | playbook 框架＋兩次執行零漂移＋模型前測表 |
 
+**本學期覆蓋嘅官方技術**：OSPF、EIGRP、RSTP（S1）｜FSRM、iSCSI（S2）｜Keepalived（S3）｜PowerShell、Ansible Playbook、Bash shell scripting（S4）
+
 **整合檢查點（Sem 3 最後兩星期）**
 
 1. **空環境重建**：由零跑一次全部 IaC → 三族服務都起返
@@ -251,6 +255,8 @@
 | **S3** | **Linux MCP** ＋ **Monitoring MCP**：讀服務狀態／日誌／資源；查 metrics、alerts、日誌彙整 | 同上 |
 | **S4** | **Documentation MCP**（主機事實、IP 規劃、服務目錄、漂移基準）＋ MCP host／agent 整合＋唯讀驗證 | 5 個 server 工具總表＋跨族問答完整記錄 |
 
+**本學期覆蓋嘅官方技術**：AI Network Management ─ Agentic AI、OpenClaw Skills、MCP（S4）＋ Windows／Linux／Cisco／Monitoring 各族唯讀工具（S1／S2／S3）
+
 **整合檢查點（Sem 4 最後兩星期）**
 
 1. **跨族問答**：例如「Linux 上嘅網頁服務健唔健康？相關 Cisco 介面有冇異常？」→ AI 要跨 2 族以上找答案
@@ -277,6 +283,8 @@
 | **S2** | 安全原則同稽核政策；做 **DC 備援／還原演練**（備份 → 破壞 → 還原） | 還原前後對照＋時間記錄 |
 | **S3** | **服務備援切換演練**（停正機，Keepalived 接手）；完成 Visualization：總儀表板＋拓撲圖＋服務目錄圖 | 切換前後（服務不中斷）＋圖 |
 | **S4** | 變更五步鏈實作（6 欄位提案／批准／一次性 token／執行／稽核）；跑評估套件；寫報告同簡報 | 提案樣本＋9 邊界測試＋稽核 100%＋D1–D12 |
+
+**本學期覆蓋嘅官方技術**：BGP、ASA（S1）｜RRAS、IKEv2（S2）｜OpenVPN／WireGuard（S3）｜自動化收尾同評估套件（S4）
 
 **整合檢查點（Sem 5 最後三星期）**
 

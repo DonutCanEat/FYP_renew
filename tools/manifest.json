@@ -10,7 +10,7 @@
                   },
                   {
                       "path":  "agent.md",
-                      "sha256":  "edf44eeabe680e6b52cc919b149fdb4d4ebb01f4aa8d2ddbd2fca0789f339a0a"
+                      "sha256":  "4b91a922155c81fdc62407c50827dec0756cac042df4f850809ce8a70b07b8cc"
                   },
                   {
                       "path":  "AY2627_FYP topics_v2_Victor Li.docx",
@@ -22,11 +22,11 @@
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "74a63cd0d5ab3a8099e3cd71d221687b5dc0d82da7b7830cd853a69474acc94c"
+                      "sha256":  "7e041476d857eabb5f841be73e6277e9794112ff696a23f95937c06cbd4f22db"
                   },
                   {
                       "path":  "STUDY_PLAN.md",
-                      "sha256":  "b9e92f5967a637726dbb1b08b878c0a1e320c575d4053797578964cbb4b38edb"
+                      "sha256":  "dc2f90d443f16b140b6fcc3521b53166ddca70e343ed1a7cf3f227f4e69fa407"
                   },
                   {
                       "path":  "tools/verify.ps1",
@@ -34,7 +34,7 @@
                   },
                   {
                       "path":  "Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx",
-                      "sha256":  "ec408eb33bc389e096722f769fbfaa02c001e8b8eb4b6e4b80b3a1eeee68f18d"
+                      "sha256":  "8bc4334e01fd63e2003801cad4cf531e024a7c11acb7f247851ec4368af9bc5d"
                   },
                   {
                       "path":  "Victor2_Topic_AY2627_Detailed.png",

@@ -224,7 +224,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File tools/verify.ps1 -Note "簡述今�
 
 > **運作模式**：Sem 1 全隊一齊學晒所有基礎；**Sem 2–5 各自做返自己嗰 part（並行）**，每學期尾做一次整合檢查點。詳見 [STUDY_PLAN.md](STUDY_PLAN.md)。
 > **Sem 5 技術凍結**：Sem 5 之後唔再加新功能，只做測試與文件。
-> **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準，docx 待更新。
+> **註**：官方 4 頁計劃書已同步更正（5 個學期、Skill 39、Sem 1 基礎營＋Sem 2–5 分工），三份文件（README／agent.md／docx）一致。
 
 ---
 
@@ -277,7 +277,7 @@ FYP/
     manifest.json                                 入版控檔案嘅 SHA-256 清單（由 -WriteManifest 產生）
   _reports/                                       驗證記錄（產生物，不入版控）
   Victor2_Topic_AY2627_Detailed.png               官方題目頁（**最新版**，AY2026/27；需求來源，唯讀）
-  Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx   官方 4 頁計劃書（需求來源，唯讀）
+  Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx   官方 4 頁計劃書（需求來源；已對齊 5 個學期、Skill 39、Sem 1 基礎營＋Sem 2–5 分工）
   With in AIMCPLLM.txt                            原始需求草稿（範圍來源，唯讀）
   AY2627_FYP topics_v2_Victor Li.docx             較早版本題目文件（3 條題目總覽；只作背景參考）
 ```

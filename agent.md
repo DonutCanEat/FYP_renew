@@ -273,7 +273,7 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 > **運作模式**：Sem 1 全隊一齊學晒所有基礎；**Sem 2–5 各自做返自己嗰 part（並行）**，每學期尾做整合檢查點，過咗才報關卡。
 > **Sem 5 技術凍結（Technical Freeze）**：Sem 5 之後唔再加新功能，只做測試與文件。**Agent 在 Sem 5 後不得新增功能程式碼**，除非使用者明確解除凍結。
 > **學習配套**：每個學期嘅學習內容、單元與證據要求見 `STUDY_PLAN.md`；名詞解釋與比喻見 `LEARNING_GUIDE.md`。
-> **註**：官方 4 頁計劃書（唯讀基準）寫「12 Weeks」，與實際 5 個學期唔一致；本表以 **5 個學期**為準。
+> **註**：官方 4 頁計劃書已同步更正（5 個學期、Skill 39），與本表一致。
 
 ### 4.5 角色與交付
 
@@ -309,7 +309,7 @@ git diff --stat fyp-only fyp/main          # 空 = remote 同本機一致
 | `tools/verify.ps1` | **唯一驗證入口**（Stage A／B／D） | ✅（改完即刻用新舊結果對照） |
 | `tools/manifest.json` | 入版控檔案嘅 SHA-256 清單（漂移偵測） | ❌ 只准 `-WriteManifest` 產生 |
 | `_reports/` | 驗證記錄（產生物） | ❌ 不入版控 |
-| `Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx` | 官方 4 頁計劃書（需求來源，**唯讀基準**） | ❌ 只讀 |
+| `Victor2_Enterprise_Network_Infrastructure_4Pages_EN.docx` | 官方 4 頁計劃書（需求來源；已對齊 5 學期／Skill 39） | ❌ 只讀（更正錯誤須使用者明確指示） |
 | `With in AIMCPLLM.txt` | 原始需求草稿（範圍來源） | ❌ 只讀 |
 | `Victor2_Topic_AY2627_Detailed.png` | **最新版官方題目頁**：Victor2（AY2026/27）技術清單＋標準參考 | ❌ 只讀 |
 | `AY2627_FYP topics_v2_Victor Li.docx` | 較早版本題目文件：3 條題目總覽（只作背景參考） | ❌ 只讀 |
